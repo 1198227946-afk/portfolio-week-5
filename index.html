@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yijia Wu · Home</title>
+  <meta name="description" content="Yijia Wu's personal website — a frontend developer who loves life, coffee, and cats.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-dot">Y</span>
+        <span>Yijia Wu</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero container">
+      <img src="avatar.jpg" alt="Yijia Wu" class="avatar avatar-photo">
+      <h1>Hi, I'm Yijia Wu <span class="wave">👋</span></h1>
+      <p class="tagline">A frontend developer who loves writing code, drinking coffee, and getting my keyboard stepped on by a cat. I believe a great product needs both useful features and a warm experience. Welcome to my little corner of the web.</p>
+      <div class="hero-actions">
+        <a href="projects.html" class="btn btn-primary">See my work</a>
+        <a href="contact.html" class="btn btn-ghost">Say hello</a>
+      </div>
+    </section>
+
+    <!-- Favorite things -->
+    <section class="section container">
+      <h2 class="section-title">Things I Love</h2>
+      <p class="section-subtitle">Three little things that keep me energized every day ☀️</p>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">☕</div>
+          <h3>Pour-over Coffee</h3>
+          <p>Every morning starts with a cup of floral, fruity goodness. I love exploring how different regions and roast levels change the flavor — it makes my coding mornings feel like a ritual.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🐱</div>
+          <h3>Hanging Out with My Cat</h3>
+          <p>I have an orange tabby named Nian Gao who loves to perch on my arm while I type. He's the best debugging partner — even if she occasionally stomps across the keyboard.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🚶</div>
+          <h3>City Wanders</h3>
+          <p>On weekends I lace up comfortable shoes and wander the streets aimlessly, photographing interesting windows, signs, and graffiti. Slowing down somehow makes inspiration run faster.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Favorite animals -->
+    <section class="section container" style="padding-top:0;">
+      <h2 class="section-title">My Favorite Animals</h2>
+      <p class="section-subtitle">The three animals that always make my day 🐾</p>
+      <div class="animal-list-card">
+        <ul class="animal-list">
+          <li><span class="animal-emoji">🐰</span><span>Rabbits</span></li>
+          <li><span class="animal-emoji">🐱</span><span>Cats</span></li>
+          <li><span class="animal-emoji">🦌</span><span>Deer</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Favorite movies -->
+    <section class="section container" style="padding-top:0;">
+      <h2 class="section-title">My Favorite Movies</h2>
+      <p class="section-subtitle">Three films I never get tired of rewatching 🎬</p>
+      <div class="movie-list-card">
+        <ul class="movie-list">
+          <li>
+            <span class="movie-year">2005</span>
+            <div>
+              <h3>Pride &amp; Prejudice</h3>
+              <p>A gentle, sunlit adaptation of Jane Austen's novel — Elizabeth Bennet and Mr. Darcy slowly move from pride and prejudice to understanding and love. Quiet, witty, and full of longing glances.</p>
+            </div>
+          </li>
+          <li>
+            <span class="movie-year">1939</span>
+            <div>
+              <h3>Gone with the Wind</h3>
+              <p>An epic set against the American Civil War, following the headstrong Scarlett O'Hara through love, loss, and survival. Grand in scale, and unforgettable for its sweeping romance.</p>
+            </div>
+          </li>
+          <li>
+            <span class="movie-year">2016</span>
+            <div>
+              <h3>Your Name</h3>
+              <p>Makoto Shinkai's animated romance, where two strangers mysteriously swap bodies. A story about time, distance, and a connection that reaches across both — visually breathtaking.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="fun-fact">
+        💡 <strong>Fun fact about me:</strong> I once brewed coffee a different way for 365 days straight, and ended up taking all three of my grinders apart and putting them back together — apparently that's even more satisfying than refactoring code.
+      </div>
+      <div class="fun-fact">
+        👗 <strong>Another fun fact:</strong> My wardrobe is a devoted follower of low-saturation colors — pale pink, off-white, oat, and light khaki. The reason is simple: it looks like a gentle cup of latte.
+      </div>
+      <div class="footer-social">
+        <a href="contact.html" title="Email">✉️</a>
+        <a href="projects.html" title="GitHub">🐙</a>
+        <a href="resume.html" title="Resume">📄</a>
+        <a href="index.html" title="Home">🏠</a>
+      </div>
+      <p class="footer-copy">© 2026 Yijia Wu · Built with ☕ and 🐱</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

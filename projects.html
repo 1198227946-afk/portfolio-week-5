@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects · Yijia Wu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-dot">Y</span>
+        <span>Yijia Wu</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header container">
+      <h1>Projects</h1>
+      <p>Two small, functional apps — a to-do list for daily tasks and a live weather search for any city.</p>
+    </section>
+
+    <section class="section container" style="padding-top:8px;">
+      <div class="todo-app" id="todoApp">
+        <div class="todo-search-wrap">
+          <input type="text" id="todoSearch" class="todo-search-input" placeholder="🔍 Search tasks…" autocomplete="off">
+          <button type="button" id="todoSearchClear" class="todo-search-clear" hidden aria-label="Clear search">✕</button>
+        </div>
+        <div class="todo-input-row">
+          <div class="todo-input-group">
+            <div class="todo-emoji-wrap">
+              <button type="button" id="todoEmojiBtn" class="todo-emoji-btn" aria-label="Choose emoji">✨</button>
+              <div class="todo-emoji-panel" id="todoEmojiPanel" hidden>
+                <button type="button" class="todo-emoji-opt" data-emoji="✨">✨</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="📚">📚</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="💻">💻</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="🧹">🧹</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="🍳">🍳</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="🏃">🏃</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="💡">💡</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="🎯">🎯</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="📞">📞</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="🛒">🛒</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="💊">💊</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="😴">😴</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="✈️">✈️</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="🎨">🎨</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="🎵">🎵</button>
+                <button type="button" class="todo-emoji-opt todo-emoji-clear" data-emoji="">✕</button>
+              </div>
+            </div>
+            <input type="text" id="todoText" class="todo-text-input" placeholder="What needs to be done?" autocomplete="off">
+          </div>
+          <input type="date" id="todoDate" class="todo-date-input">
+          <select id="todoPriority" class="todo-priority-select" aria-label="Priority">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+          <button id="todoAdd" class="btn btn-primary">Add</button>
+        </div>
+
+        <div class="todo-sections">
+          <div class="todo-section todo-section-open" id="todoSectionOpen">
+            <h3 class="todo-section-title">
+              <span class="todo-section-dot dot-open"></span>
+              <span class="todo-section-label">To Do</span>
+              <span class="todo-section-count" id="todoOpenCount">0</span>
+            </h3>
+            <ul class="todo-list" id="todoListOpen"></ul>
+            <div class="todo-section-empty" id="todoEmptyOpen">
+              <p>All done! 🎉 Time for a break.</p>
+            </div>
+          </div>
+
+          <div class="todo-section todo-section-done" id="todoSectionDone">
+            <h3 class="todo-section-title">
+              <span class="todo-section-dot dot-done"></span>
+              <span class="todo-section-label">Completed</span>
+              <span class="todo-section-count" id="todoDoneCount">0</span>
+            </h3>
+            <ul class="todo-list" id="todoListDone"></ul>
+            <div class="todo-section-empty" id="todoEmptyDone" hidden>
+              <p>Nothing completed yet.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="todo-empty" id="todoEmptyMain" hidden>
+          <div class="todo-empty-icon">📝</div>
+          <p>No tasks yet — add one above to get started.</p>
+        </div>
+
+        <div class="todo-footer">
+          <span id="todoCount">Completed 0 / 0</span>
+          <button id="todoClearCompleted" class="todo-clear-btn" hidden>Clear completed</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" style="padding-top:8px;">
+      <div class="weather-app" id="weatherApp">
+        <div class="weather-head">
+          <h2>Weather App</h2>
+          <p>Type a city name and search to see its current weather.</p>
+          <div class="weather-unit-toggle" id="weatherUnitToggle" role="group" aria-label="Temperature unit">
+            <button type="button" class="weather-unit-btn active" data-unit="c" aria-pressed="true">°C</button>
+            <button type="button" class="weather-unit-btn" data-unit="f" aria-pressed="false">°F</button>
+          </div>
+        </div>
+        <form class="weather-search" id="weatherForm" novalidate>
+          <input type="text" id="weatherCity" class="weather-input" placeholder="e.g. Beijing" autocomplete="off" aria-label="City name">
+          <button type="submit" id="weatherSearch" class="btn btn-primary weather-btn">Search</button>
+        </form>
+        <div class="weather-status" id="weatherStatus" hidden></div>
+        <div class="weather-suggestions" id="weatherSuggestions" hidden></div>
+        <div class="weather-result" id="weatherResult" hidden>
+          <div class="weather-icon" id="weatherIcon" aria-hidden="true">☀️</div>
+          <div class="weather-info">
+            <h3 class="weather-city" id="weatherCityName"></h3>
+            <p class="weather-temp"><span id="weatherTemp"></span><span class="weather-unit" id="weatherUnit">°C</span></p>
+            <p class="weather-condition" id="weatherCondition"></p>
+          </div>
+        </div>
+        <div class="weather-forecast" id="weatherForecast" hidden>
+          <h3 class="weather-forecast-title">Next 3 days</h3>
+          <div class="weather-forecast-grid" id="weatherForecastGrid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="fun-fact">
+        💡 <strong>Fun fact about me:</strong> My wardrobe is a devoted follower of low-saturation colors — pale pink, off-white, oat, and light khaki. The reason is simple: it looks like a gentle cup of latte.
+      </div>
+      <div class="footer-social">
+        <a href="contact.html" title="Email">✉️</a>
+        <a href="projects.html" title="GitHub">🐙</a>
+        <a href="resume.html" title="Resume">📄</a>
+        <a href="index.html" title="Home">🏠</a>
+      </div>
+      <p class="footer-copy">© 2026 Yijia Wu · Built with ☕ and 🐱</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
